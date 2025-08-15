@@ -210,22 +210,27 @@ frontend:
 
 metadata:
   created_by: "main_agent"
-  version: "3.0"
-  test_sequence: 4
+  version: "4.0"
+  test_sequence: 5
   run_ui: false
 
 test_plan:
   current_focus:
-    - "Simplify card content to essential information only"
-    - "Make cards smaller and more compact"
-    - "Maintain clean spacing and balance"
+    - "Add age back to listing cards"
+    - "Remove Available/Sold labels from cards"
+    - "Replace Available Pets heading with sorting options"
+    - "Remove quantity selector from product detail page"
+    - "Add Blog section to navbar"
+    - "Add Settings to user dropdown"
+    - "Implement cart sliding animation"
+    - "Add dark mode toggle and theming"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
 agent_communication:
     - agent: "main"
-      message: "Completed card simplification and compactification as requested. Changes: 1) Removed description, morph, age, sub-species - keeping only price, title, species, gender 2) Made cards smaller: h-40 image, p-3 padding, smaller text/badges 3) Maintained clean spacing and visual balance 4) Kept 4-column responsive grid intact. Cards are now simpler, more compact, and easier to browse while maintaining professional design."
+      message: "Completed comprehensive marketplace updates: 1) Listing cards now show age, removed Available/Sold labels for cleaner look 2) Added sorting options replacing Available Pets heading 3) Removed quantity selector from product detail 4) Added Blog to navbar and Settings to user dropdown 5) Implemented cart sliding animation with CartContext/Animation components 6) Added dark mode toggle with ThemeContext, smooth transitions, localStorage persistence. All features ready for testing across responsive views."
 
 metadata:
   created_by: "main_agent"
