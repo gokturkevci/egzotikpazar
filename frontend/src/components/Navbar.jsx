@@ -140,6 +140,7 @@ const Navbar = () => {
                     <div className="py-2">
                       {[
                         { name: 'Profile', path: '/profile', icon: User },
+                        { name: 'Settings', path: '/settings', icon: User },
                         { name: 'Messages', path: '/messages', icon: MessageSquare },
                         { name: 'Cart', path: '/cart', icon: ShoppingCart },
                         { name: 'Add Listing', path: '/add-listing', icon: Plus }
