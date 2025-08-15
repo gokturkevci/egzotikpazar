@@ -102,86 +102,78 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "4-Column Grid Listing Layout Improvements:
-1. Layout: Display listings in a 4-column grid with small image at top, followed by price, title, and key details in clean organization
-2. Design & Aesthetics: Make cards visually appealing, balanced, and easy to read with consistent spacing, padding, and subtle shadows for modern look
-3. Responsive: Ensure it looks good on desktop, tablet, and mobile for organized, professional, and user-friendly experience"
+user_problem_statement: "Simplified Compact Listing Cards Update:
+1. Layout & Content: Keep 4-column grid, small image at top, display only price, title, species, and gender. Remove description and morph information
+2. Design & Size: Make cards slightly smaller than before with clean spacing, padding, and overall balance
+3. Responsive: Keep design responsive for desktop, tablet, and mobile for simpler, more compact, easier to browse experience"
 
 frontend:
-  - task: "Implement 4-column grid layout"
+  - task: "Simplify card content to essential information only"
     implemented: true
-    working: true
-    file: "/app/frontend/src/components/Home.jsx"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
-        - working: "NA"
-          agent: "main"
-          comment: "Updated grid classes to 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' for proper 4-column layout on desktop with responsive breakpoints"
-        - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: Desktop (1920px) shows perfect 4-column layout as expected. Mobile (390px) shows correct single column. All responsive grid classes present and working. Minor: Tablet (768px) shows 2 columns instead of 3, but core 4-column desktop requirement fully met."
-
-  - task: "Redesign cards with compact vertical layout"
-    implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Completely redesigned ListingCard to vertical layout with small image at top (h-48), followed by price, title, and key details in organized hierarchy. Removed horizontal layout approach"
-        - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: Card structure perfect with small image at top (h-48 class confirmed), vertical layout working correctly. Price prominently displayed, title clear, content hierarchy properly organized. Cards maintain good proportions across all screen sizes."
+          comment: "Removed description section, morph badges, age field, and sub-species. Cards now show only price, title, species, and gender as requested for simpler browsing experience"
 
-  - task: "Improve visual design and modern styling"
+  - task: "Make cards smaller and more compact"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Enhanced visual design with consistent spacing, rounded-2xl corners, shadow-lg with hover:shadow-xl, modern color schemes, and clean typography. Improved badge styling and compact layout"
-        - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: Modern styling confirmed with rounded-2xl corners, shadow-lg effects, hover animations working. Cards have professional appearance with consistent spacing, modern color gradients, and clean typography. Visual design meets all requirements."
+          comment: "Reduced card size: image height from h-48 to h-40, padding from p-4 to p-3, spacing reduced, smaller badges and buttons, rounded corners from rounded-2xl to rounded-xl"
 
-  - task: "Organize content hierarchy in cards"
+  - task: "Maintain clean spacing and balance"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Structured content in clean hierarchy: image → price (prominent) → title → species tags → key details grid → description → action button → footer. Improved readability and organization"
-        - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: Content hierarchy perfectly organized as requested - image at top, price prominent ($350), title clear, species tags visible, key details grid present, action button full-width. All elements properly structured and readable."
+          comment: "Adjusted spacing throughout card: space-y-2 instead of space-y-3, smaller text sizes, compact badge styling, maintained visual balance despite smaller size"
 
-  - task: "Ensure responsive design across devices"
+  - task: "Keep 4-column responsive grid layout"
     implemented: true
     working: true
     file: "/app/frontend/src/components/Home.jsx"
     stuck_count: 0
-    priority: "high"
+    priority: "low"
     needs_retesting: false
     status_history:
-        - working: "NA"
-          agent: "main"
-          comment: "Implemented responsive grid: 1 column mobile, 2 columns small tablet, 3 columns large tablet, 4 columns desktop. Cards adapt properly to all screen sizes"
         - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: Responsive design working across devices. Desktop (1920px): 4 columns perfect. Mobile (390px): single column excellent. Cards maintain good readability and proportions. Minor: Tablet shows 2 columns instead of 3, but overall responsive behavior is solid."
+          agent: "main"
+          comment: "Grid layout unchanged: grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 remains intact as requested"
+
+metadata:
+  created_by: "main_agent"
+  version: "3.0"
+  test_sequence: 4
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Simplify card content to essential information only"
+    - "Make cards smaller and more compact"
+    - "Maintain clean spacing and balance"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "main"
+      message: "Completed card simplification and compactification as requested. Changes: 1) Removed description, morph, age, sub-species - keeping only price, title, species, gender 2) Made cards smaller: h-40 image, p-3 padding, smaller text/badges 3) Maintained clean spacing and visual balance 4) Kept 4-column responsive grid intact. Cards are now simpler, more compact, and easier to browse while maintaining professional design."
 
 metadata:
   created_by: "main_agent"
