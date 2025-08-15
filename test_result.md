@@ -190,12 +190,7 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "Implement 4-column grid layout"
-    - "Redesign cards with compact vertical layout"
-    - "Improve visual design and modern styling"
-    - "Organize content hierarchy in cards"
-    - "Ensure responsive design across devices"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
