@@ -129,15 +129,18 @@ frontend:
 
   - task: "Remove Available/Sold labels from cards"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Removed stock status badges completely from card image overlay, cleaner design without availability labels"
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: Available/Sold labels successfully removed from listing cards. Cards now have cleaner appearance without availability status overlays on images. Implementation working correctly."
 
   - task: "Replace Available Pets heading with sorting options"
     implemented: true
