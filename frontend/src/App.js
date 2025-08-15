@@ -29,6 +29,8 @@ function App() {
             <Route path="/messages" element={<Messages />} />
             <Route path="/add-listing" element={<AddListing />} />
             <Route path="/listings" element={<Home />} />
+            <Route path="/blog" element={<div className="p-8 text-center">Blog coming soon!</div>} />
+            <Route path="/settings" element={<div className="p-8 text-center">Settings page coming soon!</div>} />
             <Route path="/sellers" element={<div className="p-8 text-center">Sellers page coming soon!</div>} />
             <Route path="/about" element={<div className="p-8 text-center">About page coming soon!</div>} />
             <Route path="/contact" element={<div className="p-8 text-center">Contact page coming soon!</div>} />
