@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Menu, X, User, MessageSquare, ShoppingCart, Plus, LogOut, Leaf } from 'lucide-react';
+import { Search, Menu, X, User, MessageSquare, ShoppingCart, Plus, LogOut, Leaf, Settings } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { currentUser } from '../mock';
