@@ -114,15 +114,18 @@ All with smooth animations, responsive design, and modern styling"
 frontend:
   - task: "Add age back to listing cards"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Added age as third badge (purple) alongside species (green) and gender (blue) badges in listing cards"
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: Age badge (purple) successfully displayed as third badge in listing cards alongside species (green) and gender (blue) badges. Implementation working perfectly across all viewport sizes."
 
   - task: "Remove Available/Sold labels from cards"
     implemented: true
