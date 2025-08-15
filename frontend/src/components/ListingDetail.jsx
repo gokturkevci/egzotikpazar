@@ -13,7 +13,6 @@ const ListingDetail = () => {
   const [listing, setListing] = useState(null);
   const [seller, setSeller] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     // Find listing by ID
