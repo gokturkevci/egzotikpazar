@@ -194,7 +194,7 @@ const Home = () => {
 
             {/* Listings Grid */}
             {filteredListings.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-8">
                 {filteredListings.map((listing, index) => (
                   <div 
                     key={listing.id} 
