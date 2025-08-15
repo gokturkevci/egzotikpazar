@@ -33,15 +33,15 @@ const ListingCard = ({ listing }) => {
     >
       <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-lg border border-green-100/50 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
         
-        {/* Horizontal Layout Container */}
-        <div className="flex flex-col lg:flex-row h-full">
+        {/* Responsive Layout Container */}
+        <div className="flex flex-col xl:flex-row h-full">
           
-          {/* Enhanced Image Container - Left Side */}
-          <div className="relative overflow-hidden lg:w-2/5 flex-shrink-0">
+          {/* Enhanced Image Container - Left Side on large screens */}
+          <div className="relative overflow-hidden xl:w-2/5 flex-shrink-0">
             <img
               src={listing.images[0]}
               alt={listing.title}
-              className="w-full h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-64 xl:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
             />
             
             {/* Gradient Overlay */}
@@ -96,12 +96,12 @@ const ListingCard = ({ listing }) => {
             </div>
           </div>
 
-          {/* Enhanced Content - Right Side */}
-          <div className="p-6 lg:p-8 space-y-4 flex-1 flex flex-col">
+          {/* Enhanced Content - Right Side on large screens */}
+          <div className="p-6 xl:p-8 space-y-4 flex-1 flex flex-col">
             
             {/* Price and Quantity Row */}
             <div className="flex items-center justify-between">
-              <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-green-700 to-emerald-700 bg-clip-text text-transparent">
+              <div className="text-3xl xl:text-4xl font-bold bg-gradient-to-r from-green-700 to-emerald-700 bg-clip-text text-transparent">
                 ${listing.price.toLocaleString()}
               </div>
               {listing.quantity > 1 && (
@@ -112,7 +112,7 @@ const ListingCard = ({ listing }) => {
             </div>
 
             {/* Title */}
-            <h3 className="font-bold text-xl lg:text-2xl text-gray-800 line-clamp-2 group-hover:text-green-700 transition-colors duration-300 leading-tight">
+            <h3 className="font-bold text-xl xl:text-2xl text-gray-800 line-clamp-2 group-hover:text-green-700 transition-colors duration-300 leading-tight">
               {listing.title}
             </h3>
 
