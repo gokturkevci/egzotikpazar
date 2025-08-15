@@ -187,23 +187,6 @@ const ListingDetail = () => {
 
               {/* Action Buttons */}
               <div className="space-y-3">
-                {listing.inStock && (
-                  <div className="flex items-center space-x-4 mb-4">
-                    <label className="text-sm font-medium text-gray-700">Quantity:</label>
-                    <select
-                      value={quantity}
-                      onChange={(e) => setQuantity(parseInt(e.target.value))}
-                      className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-                    >
-                      {[...Array(Math.min(listing.quantity, 5))].map((_, i) => (
-                        <option key={i + 1} value={i + 1}>
-                          {i + 1}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                )}
-
                 <div className="flex space-x-3">
                   <Button
                     onClick={handleAddToCart}
