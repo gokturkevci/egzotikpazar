@@ -102,68 +102,111 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Simplified Compact Listing Cards Update:
-1. Layout & Content: Keep 4-column grid, small image at top, display only price, title, species, and gender. Remove description and morph information
-2. Design & Size: Make cards slightly smaller than before with clean spacing, padding, and overall balance
-3. Responsive: Keep design responsive for desktop, tablet, and mobile for simpler, more compact, easier to browse experience"
+user_problem_statement: "Comprehensive Marketplace Updates:
+1. Listing Cards: Display age, remove Available/Sold labels, use sorting options instead
+2. Product Detail: Remove quantity selector 
+3. Home Page: Adjust login section design (navbar-based)
+4. Cart Animation: Show sliding cart from right when product added
+5. Navbar: Add Blog section, Settings in dropdown
+6. Dark Mode: Add clear and accessible dark mode toggle
+All with smooth animations, responsive design, and modern styling"
 
 frontend:
-  - task: "Simplify card content to essential information only"
+  - task: "Add age back to listing cards"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Removed description section, morph badges, age field, and sub-species. Cards now show only price, title, species, and gender as requested for simpler browsing experience"
-        - working: true
-          agent: "testing"
-          comment: "COMPREHENSIVE TESTING COMPLETED ✅ Content simplification verified: Price, title, species badge, and gender badge all displayed correctly. Successfully removed: description text, morph information, age details, and sub-species. Cards now show only essential information as requested, creating a cleaner and simpler browsing experience."
+          comment: "Added age as third badge (purple) alongside species (green) and gender (blue) badges in listing cards"
 
-  - task: "Make cards smaller and more compact"
+  - task: "Remove Available/Sold labels from cards"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/ListingCard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Reduced card size: image height from h-48 to h-40, padding from p-4 to p-3, spacing reduced, smaller badges and buttons, rounded corners from rounded-2xl to rounded-xl"
-        - working: true
-          agent: "testing"
-          comment: "COMPACT SIZE VERIFICATION SUCCESSFUL ✅ All size reductions confirmed: Image height reduced to h-40 (from h-48), padding reduced to p-3 (from p-4), spacing reduced to space-y-2, smaller badges and buttons implemented. Cards are noticeably more compact while maintaining visual balance and readability."
+          comment: "Removed stock status badges completely from card image overlay, cleaner design without availability labels"
 
-  - task: "Maintain clean spacing and balance"
+  - task: "Replace Available Pets heading with sorting options"
     implemented: true
-    working: true
-    file: "/app/frontend/src/components/ListingCard.jsx"
-    stuck_count: 0
-    priority: "medium"
-    needs_retesting: false
-    status_history:
-        - working: "NA"
-          agent: "main"
-          comment: "Adjusted spacing throughout card: space-y-2 instead of space-y-3, smaller text sizes, compact badge styling, maintained visual balance despite smaller size"
-        - working: true
-          agent: "testing"
-          comment: "CLEAN SPACING & BALANCE VERIFIED ✅ Despite the smaller card size, visual balance is maintained excellently. Compact spacing (space-y-2) works well, smaller text sizes are readable, badge styling is clean and professional. Cards look organized and maintain good visual hierarchy."
-
-  - task: "Keep 4-column responsive grid layout"
-    implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/Home.jsx"
     stuck_count: 0
-    priority: "low"
-    needs_retesting: false
+    priority: "high"
+    needs_retesting: true
     status_history:
-        - working: true
+        - working: "NA"
           agent: "main"
-          comment: "Grid layout unchanged: grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 remains intact as requested"
+          comment: "Replaced 'Available Pets' header with comprehensive sorting section including dropdown (newest, price, name, species) and view toggle buttons"
+
+  - task: "Remove quantity selector from product detail page"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/ListingDetail.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Removed quantity state, selector UI, and quantity parameter from add to cart function in ListingDetail component"
+
+  - task: "Add Blog section to navbar"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/Navbar.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Added Blog to navLinks array between Listings and Contact, also added /blog route in App.js with placeholder"
+
+  - task: "Add Settings to user dropdown"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/Navbar.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Added Settings with Settings icon to both desktop and mobile user dropdown menus, also added /settings route"
+
+  - task: "Implement cart sliding animation"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/CartAnimation.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Created CartContext, CartAnimation component with slide-in-right animation, product info display, cart summary. Integrated with ListingCard addToCart function"
+
+  - task: "Add dark mode toggle and theming"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/DarkModeToggle.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Created ThemeContext, DarkModeToggle component with sun/moon icons, smooth transitions. Added to navbar, extended dark mode CSS classes, localStorage persistence"
 
 metadata:
   created_by: "main_agent"
