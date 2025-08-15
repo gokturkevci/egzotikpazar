@@ -159,15 +159,18 @@ frontend:
 
   - task: "Remove quantity selector from product detail page"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/ListingDetail.jsx"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Removed quantity state, selector UI, and quantity parameter from add to cart function in ListingDetail component"
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: Quantity selector successfully removed from product detail page. No quantity input fields or quantity labels found on product detail pages. Add to Cart functionality simplified as requested."
 
   - task: "Add Blog section to navbar"
     implemented: true
