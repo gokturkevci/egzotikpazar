@@ -31,7 +31,7 @@ const ListingCard = ({ listing }) => {
       onMouseLeave={() => setIsHovered(false)}
       className="group cursor-pointer transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-2"
     >
-      <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-lg border border-green-100/50 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
+      <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl border border-green-100/50 overflow-hidden hover:shadow-2xl hover:border-green-200/70 transition-all duration-500 h-full">
         
         {/* Responsive Layout Container */}
         <div className="flex flex-col xl:flex-row h-full">
