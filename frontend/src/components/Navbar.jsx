@@ -4,6 +4,7 @@ import { Search, Menu, X, User, MessageSquare, ShoppingCart, Plus, LogOut, Leaf,
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { currentUser } from '../mock';
+import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
