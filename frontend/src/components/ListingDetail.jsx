@@ -39,7 +39,7 @@ const ListingDetail = () => {
   }
 
   const handleAddToCart = () => {
-    console.log('Added to cart:', listing.title, 'Quantity:', quantity);
+    console.log('Added to cart:', listing.title);
     // Mock cart functionality
   };
 
