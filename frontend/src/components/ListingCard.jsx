@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Heart, ShoppingCart, MapPin, Star, Eye, Clock } from 'lucide-react';
+import { Heart, ShoppingCart, MapPin, Clock } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import { useCart } from '../contexts/CartContext';
 
 const ListingCard = ({ listing }) => {
   const navigate = useNavigate();
+  const { addToCart } = useCart();
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
 
@@ -15,6 +17,7 @@ const ListingCard = ({ listing }) => {
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
+    addToCart(listing);
     console.log('Added to cart:', listing.title);
   };
 
