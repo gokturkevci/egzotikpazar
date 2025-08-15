@@ -188,14 +188,23 @@ const Navbar = () => {
         {/* Mobile Search */}
         <div className="md:hidden px-4 pb-4">
           <form onSubmit={handleSearch} className="relative">
-            <Input
-              type="text"
-              placeholder="Search for pets..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 pr-4 py-3 w-full rounded-2xl border-2 border-green-200/50 bg-white/70 backdrop-blur-sm focus:border-green-400"
-            />
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-500 w-5 h-5" />
+            <div className="relative flex items-center">
+              <Input
+                type="text"
+                placeholder="Search for pets..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-12 pr-20 py-3 w-full rounded-2xl border-2 border-green-200/50 bg-white/70 backdrop-blur-sm focus:border-green-400"
+              />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-500 w-5 h-5" />
+              <Button
+                type="submit"
+                size="sm"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-xl px-3 py-2 text-sm"
+              >
+                Search
+              </Button>
+            </div>
           </form>
         </div>
 
