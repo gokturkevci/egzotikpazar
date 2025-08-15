@@ -33,7 +33,7 @@ const ListingCard = ({ listing }) => {
     >
       <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md border border-green-100/50 overflow-hidden hover:shadow-lg hover:border-green-200/70 transition-all duration-300 h-full flex flex-col">
         
-        {/* Compact Image Container - Smaller */}
+        {/* Compact Image Container - Remove Available/Sold labels */}
         <div className="relative overflow-hidden">
           <img
             src={listing.images[0]}
@@ -44,20 +44,6 @@ const ListingCard = ({ listing }) => {
           {/* Gradient Overlay on Hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           
-          {/* Stock Status Badge - Smaller */}
-          <div className="absolute top-2 left-2">
-            <Badge 
-              variant={listing.inStock ? "default" : "secondary"}
-              className={`${
-                listing.inStock 
-                  ? "bg-emerald-500 hover:bg-emerald-600" 
-                  : "bg-red-500"
-              } text-white rounded-full px-2 py-0.5 text-xs shadow-sm font-medium`}
-            >
-              {listing.inStock ? "Available" : "Sold"}
-            </Badge>
-          </div>
-
           {/* Wishlist Button - Smaller */}
           <Button
             variant="ghost"
