@@ -88,13 +88,16 @@ const ListingCard = ({ listing }) => {
             {listing.title}
           </h3>
 
-          {/* Species & Gender Only - Simplified */}
+          {/* Species, Gender & Age - Add age back */}
           <div className="flex flex-wrap gap-1">
             <Badge className="bg-green-50 text-green-700 border border-green-200 rounded-full px-2 py-0.5 text-xs font-medium">
               {listing.species}
             </Badge>
             <Badge className="bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-2 py-0.5 text-xs font-medium">
               {listing.gender}
+            </Badge>
+            <Badge className="bg-purple-50 text-purple-700 border border-purple-200 rounded-full px-2 py-0.5 text-xs font-medium">
+              {listing.age}
             </Badge>
           </div>
 
