@@ -103,10 +103,10 @@ const Home = () => {
                   <span className="text-orange-200 font-semibold text-xl">Exclusive Launch Promotion</span>
                 </div>
                 <p className="text-3xl md:text-4xl font-bold text-center text-white leading-tight mb-2">
-                  %50 commission discount + Exclusive 'Öncü Satıcı' badge
+                  %50 Komisyon indirimi + Özel 'Öncü Satıcı' Rozetine Sahip Olun
                 </p>
                 <p className="text-lg font-medium text-orange-200 text-center">
-                  Join Türkiye's first exotic pet marketplace - Limited to first 100 sellers
+                  İlk 100 Satıcıya Özeldir
                 </p>
               </div>
 
@@ -115,14 +115,14 @@ const Home = () => {
                   size="lg" 
                   className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  Explore Pets
+                  Satıcı Ol
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-lg backdrop-blur-sm transition-all duration-300"
                 >
-                  Become a Seller
+                  İlanlara Göz At
                 </Button>
               </div>
             </div>

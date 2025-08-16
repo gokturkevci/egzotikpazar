@@ -53,7 +53,7 @@ const Navbar = () => {
               <div className="relative flex items-center">
                 <Input
                   type="text"
-                  placeholder="Search for your perfect companion..."
+                  placeholder="Keşfet..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 pr-24 py-3 w-full rounded-2xl border-2 border-green-200/50 bg-white/70 backdrop-blur-sm focus:border-green-400 focus:bg-white transition-all duration-300 placeholder:text-gray-400"
@@ -64,7 +64,7 @@ const Navbar = () => {
                   size="sm"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-xl px-4 py-2 shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  Search
+                  Ara
                 </Button>
               </div>
             </form>
