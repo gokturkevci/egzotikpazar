@@ -84,9 +84,9 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Join the First Exotic Pet
+                Marketplace in Türkiye
                 <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                  Marketplace in Türkiye
+                  Join the First Exotic Pet
                 </span>
               </h1>
               
