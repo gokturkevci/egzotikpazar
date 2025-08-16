@@ -89,44 +89,30 @@ const Home = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Discover Your Next
+                Join the First Exotic Pet
                 <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                  Exotic Friend
+                  Marketplace in Türkiye
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-green-100 mb-10 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Connect with verified breeders and passionate sellers. Find healthy, well-cared-for reptiles, amphibians, and exotic pets with complete care documentation.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-green-100 mb-12">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+              {/* Exclusive Offer Highlight */}
+              <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-6 mb-10 max-w-3xl mx-auto animate-pulse">
+                <div className="flex items-center justify-center space-x-3 mb-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full flex items-center justify-center animate-bounce">
+                    <Sparkles className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-lg">500+</div>
-                    <div className="text-sm">Verified Sellers</div>
-                  </div>
+                  <span className="text-orange-200 font-semibold text-lg">Limited Time Offer</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-lg">98%</div>
-                    <div className="text-sm">Happy Customers</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-lg">2K+</div>
-                    <div className="text-sm">Successful Sales</div>
-                  </div>
-                </div>
+                <p className="text-2xl md:text-3xl font-bold text-center text-white leading-tight">
+                  %50 commission discount + Exclusive 'Öncü Satıcı' badge
+                  <span className="block text-lg font-medium text-orange-200 mt-2">
+                    for the first 100 sellers
+                  </span>
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
