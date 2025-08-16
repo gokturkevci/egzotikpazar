@@ -100,7 +100,7 @@ const Home = () => {
               </p>
 
               {/* Exclusive Offer Highlight */}
-              <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-6 mb-10 max-w-3xl mx-auto animate-pulse">
+              <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-6 mb-8 max-w-3xl mx-auto animate-pulse">
                 <div className="flex items-center justify-center space-x-3 mb-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full flex items-center justify-center animate-bounce">
                     <Sparkles className="w-4 h-4 text-white" />
@@ -113,6 +113,53 @@ const Home = () => {
                     for the first 100 sellers
                   </span>
                 </p>
+              </div>
+
+              {/* Premium Badge Section */}
+              <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 mb-12 max-w-4xl mx-auto transform hover:scale-105 transition-all duration-500">
+                <div className="flex flex-col items-center text-center">
+                  {/* Animated Badge Icon */}
+                  <div className="relative mb-6">
+                    <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-2xl animate-spin-slow">
+                      <div className="w-20 h-20 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full flex items-center justify-center">
+                        <Shield className="w-10 h-10 text-white drop-shadow-lg" />
+                      </div>
+                    </div>
+                    {/* Glow Effect */}
+                    <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-full opacity-30 blur-xl animate-pulse"></div>
+                    {/* Sparkle Effects */}
+                    <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-300 rounded-full animate-ping"></div>
+                    <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-orange-400 rounded-full animate-bounce delay-300"></div>
+                  </div>
+                  
+                  {/* Badge Text */}
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                    Become a Verified
+                    <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                      Pioneer Seller
+                    </span>
+                  </h3>
+                  
+                  <p className="text-lg md:text-xl text-green-100 mb-6 max-w-2xl leading-relaxed">
+                    Stand out with your exclusive 'Öncü Satıcı' badge and enjoy premium benefits as one of Türkiye's first exotic pet marketplace pioneers
+                  </p>
+                  
+                  {/* Benefits List */}
+                  <div className="flex flex-wrap items-center justify-center gap-6 text-green-100">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium">Priority Support</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse delay-100"></div>
+                      <span className="text-sm font-medium">Featured Listings</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse delay-200"></div>
+                      <span className="text-sm font-medium">Exclusive Events</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
