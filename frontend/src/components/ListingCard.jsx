@@ -71,12 +71,12 @@ const ListingCard = ({ listing }) => {
           )}
         </div>
 
-        {/* Simplified Card Content - More Compact */}
+        {/* Simplified Card Content - More Compact with Price First */}
         <div className="p-3 flex flex-col flex-1 space-y-2">
           
-          {/* Price - Prominent but Smaller */}
+          {/* Price First - More Prominent */}
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
               ${listing.price.toLocaleString()}
             </div>
             {listing.quantity > 1 && (
@@ -86,8 +86,8 @@ const ListingCard = ({ listing }) => {
             )}
           </div>
 
-          {/* Title - Compact with Fixed Height */}
-          <h3 className="font-semibold text-base text-gray-800 line-clamp-2 group-hover:text-green-700 transition-colors duration-200 leading-tight h-12 overflow-hidden">
+          {/* Title - Smaller Font but Clear */}
+          <h3 className="font-medium text-sm text-gray-800 line-clamp-2 group-hover:text-green-700 transition-colors duration-200 leading-tight h-10 overflow-hidden">
             {listing.title}
           </h3>
 
