@@ -86,10 +86,7 @@ const Navbar = () => {
           </div>
 
           {/* Enhanced Auth/Profile */}
-          <div className="hidden md:flex items-center space-x-3">
-            {/* Dark Mode Toggle */}
-            <DarkModeToggle />
-            
+          <div className="hidden md:flex items-center space-x-4">
             {!isLoggedIn ? (
               <div className="flex space-x-3">
                 <Button 
