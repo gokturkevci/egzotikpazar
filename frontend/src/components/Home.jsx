@@ -248,6 +248,7 @@ const Home = () => {
             )}
           </div>
         </div>
+        </div>
       </div>
 
       {/* Featured Categories Section */}
