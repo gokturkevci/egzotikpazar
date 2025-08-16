@@ -86,8 +86,8 @@ const ListingCard = ({ listing }) => {
             )}
           </div>
 
-          {/* Title - Compact */}
-          <h3 className="font-semibold text-base text-gray-800 line-clamp-2 group-hover:text-green-700 transition-colors duration-200 leading-tight">
+          {/* Title - Compact with Fixed Height */}
+          <h3 className="font-semibold text-base text-gray-800 line-clamp-2 group-hover:text-green-700 transition-colors duration-200 leading-tight h-12 overflow-hidden">
             {listing.title}
           </h3>
 
