@@ -36,12 +36,12 @@ const ListingCard = ({ listing }) => {
     >
       <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md border border-green-100/50 overflow-hidden hover:shadow-lg hover:border-green-200/70 transition-all duration-300 h-80 flex flex-col">
         
-        {/* Compact Image Container - Remove Available/Sold labels */}
+        {/* Enhanced Image Container - Larger for More Focus */}
         <div className="relative overflow-hidden">
           <img
             src={listing.images[0]}
             alt={listing.title}
-            className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
           />
           
           {/* Gradient Overlay on Hover */}
