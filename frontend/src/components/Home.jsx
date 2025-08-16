@@ -83,11 +83,6 @@ const Home = () => {
         <div className="relative bg-gradient-to-br from-emerald-800 via-green-700 to-teal-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in-up">
-              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-                <Sparkles className="w-4 h-4 text-yellow-300" />
-                <span className="text-sm font-medium">Trusted by 10,000+ Pet Lovers</span>
-              </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 Join the First Exotic Pet
                 <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
