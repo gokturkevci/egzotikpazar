@@ -34,7 +34,7 @@ const ListingCard = ({ listing }) => {
       onMouseLeave={() => setIsHovered(false)}
       className="group cursor-pointer transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1"
     >
-      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md border border-green-100/50 overflow-hidden hover:shadow-lg hover:border-green-200/70 transition-all duration-300 h-full flex flex-col">
+      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md border border-green-100/50 overflow-hidden hover:shadow-lg hover:border-green-200/70 transition-all duration-300 h-80 flex flex-col">
         
         {/* Compact Image Container - Remove Available/Sold labels */}
         <div className="relative overflow-hidden">
