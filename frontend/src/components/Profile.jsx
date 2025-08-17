@@ -113,21 +113,46 @@ const Profile = () => {
           </CardContent>
         </Card>
 
-        {/* Profile Tabs */}
+        {/* Enhanced Profile Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
-            <TabsTrigger value="active-listings">Aktif İlanlar</TabsTrigger>
-            <TabsTrigger value="sold-items">Satışlarım</TabsTrigger>
-            <TabsTrigger value="purchased-items">Satın Aldıklarım</TabsTrigger>
-            <TabsTrigger value="messages">Mesajlar</TabsTrigger>
-            <TabsTrigger value="settings">Ayarlar</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-5 mb-8 bg-white/70 backdrop-blur-sm border border-blue-200/50 rounded-2xl p-2 shadow-lg">
+            <TabsTrigger 
+              value="active-listings" 
+              className="rounded-xl font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:to-indigo-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Aktif İlanlar
+            </TabsTrigger>
+            <TabsTrigger 
+              value="sold-items"
+              className="rounded-xl font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-emerald-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Satışlarım
+            </TabsTrigger>
+            <TabsTrigger 
+              value="purchased-items"
+              className="rounded-xl font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Satın Aldıklarım
+            </TabsTrigger>
+            <TabsTrigger 
+              value="messages"
+              className="rounded-xl font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Mesajlar
+            </TabsTrigger>
+            <TabsTrigger 
+              value="settings"
+              className="rounded-xl font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-600 data-[state=active]:to-gray-700 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Ayarlar
+            </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="active-listings" className="space-y-6">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-gray-800">Aktif İlanlar</h2>
-              <Button className="bg-green-600 hover:bg-green-700">
-                <Plus className="w-4 h-4 mr-2" />
+          <TabsContent value="active-listings" className="space-y-6 animate-fade-in-up">
+            <div className="flex items-center justify-between bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-200/50">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent">Aktif İlanlar</h2>
+              <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold">
+                <Plus className="w-5 h-5 mr-2" />
                 Yeni İlan Ekle
               </Button>
             </div>
