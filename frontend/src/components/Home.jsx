@@ -163,9 +163,6 @@ const Home = () => {
                   <h2 className="text-2xl font-bold text-gray-800">
                     {listings.length} Sonuçtan {filteredListings.length} tanesi gösteriliyor
                   </h2>
-                  <p className="text-sm text-gray-600">
-                    Find your perfect exotic companion
-                  </p>
                 </div>
               </div>
               
