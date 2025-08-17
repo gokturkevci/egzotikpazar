@@ -136,7 +136,7 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
-      <div className="bg-gradient-to-br from-white/60 via-green-50/40 to-emerald-50/30 backdrop-blur-sm py-12">
+      <div className="bg-gradient-to-br from-white/70 via-blue-50/30 to-slate-50/40 backdrop-blur-sm py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filter Panel - Left Sidebar */}
