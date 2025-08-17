@@ -70,7 +70,7 @@ const Home = () => {
   }, [filters]);
 
   return (
-    <div className="min-h-screen" style={{background: 'linear-gradient(135deg, #f5f3f0 0%, #e8f5e8 50%, #f0f4f0 100%)'}}>
+    <div className="min-h-screen" style={{background: 'linear-gradient(135deg, #fefdfb 0%, #f0f9f0 25%, #e8f5e8 50%, #f0f9f0 75%, #fefdfb 100%)'}}>
       {/* Enhanced Hero Section */}
       <div className="relative overflow-hidden">
         {/* Background Pattern */}
