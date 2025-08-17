@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Settings, Plus, MessageSquare, ShoppingBag, Package } from 'lucide-react';
+import { Calendar, Settings, Plus, MessageSquare, ShoppingBag, Package, Star, TrendingUp, Award, Edit, Camera } from 'lucide-react';
 import { Button } from './ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -9,6 +9,7 @@ import ListingCard from './ListingCard';
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState('active-listings');
+  const [isHovering, setIsHovering] = useState(false);
   
   // Mock data for user's listings and purchases
   const userListings = mockListings.filter(listing => listing.sellerId === currentUser.id);
@@ -20,47 +21,91 @@ const Profile = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Profile Header */}
-        <Card className="mb-8">
-          <CardContent className="pt-6">
-            <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
-              <img
-                src={currentUser.profilePicture}
-                alt={currentUser.name}
-                className="w-24 h-24 rounded-full border-4 border-green-200"
-              />
-              <div className="flex-1 text-center md:text-left">
-                <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                  {currentUser.name}
-                </h1>
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-gray-600 mb-4">
-                  <div className="flex items-center space-x-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>Joined {new Date(currentUser.registrationDate).toLocaleDateString()}</span>
+        
+        {/* Enhanced Profile Header */}
+        <Card className="mb-8 shadow-xl border-0 bg-gradient-to-r from-white via-blue-50/50 to-indigo-50/50 backdrop-blur-sm overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-indigo-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+          <CardContent className="pt-8 relative">
+            <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+              
+              {/* Enhanced Profile Picture */}
+              <div 
+                className="relative group/avatar"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+              >
+                <div className="relative">
+                  <img
+                    src={currentUser.profilePicture}
+                    alt={currentUser.name}
+                    className="w-32 h-32 rounded-full border-4 border-gradient-to-r border-blue-200 shadow-2xl transition-all duration-500 group-hover/avatar:scale-105 group-hover/avatar:shadow-blue-200/50"
+                  />
+                  <div className={`absolute inset-0 bg-black/20 rounded-full flex items-center justify-center transition-all duration-300 ${isHovering ? 'opacity-100' : 'opacity-0'}`}>
+                    <Camera className="w-6 h-6 text-white" />
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <Package className="w-4 h-4" />
-                    <span>{userListings.length} Aktif İlanlar</span>
+                  <div className="absolute -top-1 -right-1 w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                    <Award className="w-4 h-4 text-white" />
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <ShoppingBag className="w-4 h-4" />
-                    <span>{purchasedItems.length} Satın Aldıklarım</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                  <Badge className="bg-green-100 text-green-700">Onaylı Satıcı</Badge>
-                  <Badge className="bg-blue-100 text-blue-700">4.8★ Değerlendirme</Badge>
                 </div>
               </div>
-              <div className="flex space-x-3">
-                <Button className="bg-green-600 hover:bg-green-700">
-                  <Plus className="w-4 h-4 mr-2" />
+
+              {/* Enhanced User Info */}
+              <div className="flex-1 text-center md:text-left space-y-4">
+                <div className="space-y-2">
+                  <h1 className="text-4xl font-bold bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
+                    {currentUser.name}
+                  </h1>
+                  <p className="text-lg text-gray-600 animate-fade-in-up delay-100">
+                    Türkiye'nin İlk Egzotik Hayvan Satıcısı
+                  </p>
+                </div>
+                
+                {/* Enhanced Stats */}
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm">
+                  <div className="flex items-center space-x-2 bg-white/60 rounded-full px-4 py-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <Calendar className="w-4 h-4 text-blue-500" />
+                    <span className="font-medium">Joined {new Date(currentUser.registrationDate).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-white/60 rounded-full px-4 py-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <Package className="w-4 h-4 text-green-500" />
+                    <span className="font-medium">{userListings.length} Aktif İlanlar</span>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-white/60 rounded-full px-4 py-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <ShoppingBag className="w-4 h-4 text-purple-500" />
+                    <span className="font-medium">{purchasedItems.length} Satın Aldıklarım</span>
+                  </div>
+                </div>
+                
+                {/* Enhanced Badges */}
+                <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-bounce">
+                    ⭐ Öncü Satıcı
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Star className="w-3 h-3 mr-1" />
+                    4.8★ Değerlendirme
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <TrendingUp className="w-3 h-3 mr-1" />
+                    Top Seller
+                  </Badge>
+                </div>
+              </div>
+
+              {/* Enhanced Action Buttons */}
+              <div className="flex flex-col space-y-3">
+                <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold">
+                  <Plus className="w-5 h-5 mr-2" />
                   İlan Ekle
                 </Button>
-                <Button variant="outline" className="border-green-300 text-green-600">
-                  <Settings className="w-4 h-4 mr-2" />
+                <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold">
+                  <Edit className="w-5 h-5 mr-2" />
+                  Profili Düzenle
+                </Button>
+                <Button variant="outline" className="border-2 border-purple-300 text-purple-600 hover:bg-purple-50 px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold">
+                  <Settings className="w-5 h-5 mr-2" />
                   Ayarlar
                 </Button>
               </div>
