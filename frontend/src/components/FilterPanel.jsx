@@ -37,7 +37,7 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
           className="flex items-center space-x-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-2xl px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
         >
           <Filter className="w-5 h-5" />
-          <span className="font-medium">Filters</span>
+          <span className="font-medium">Filtre</span>
           {activeFiltersCount > 0 && (
             <Badge className="bg-orange-500 text-white rounded-full px-2 py-1 text-xs">
               {activeFiltersCount}
@@ -58,7 +58,7 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                   <Sliders className="w-4 h-4" />
                 </div>
-                <span className="text-xl font-bold">Filters</span>
+                <span className="text-xl font-bold">Filtre</span>
               </CardTitle>
               <div className="flex items-center space-x-2">
                 {activeFiltersCount > 0 && (
@@ -83,7 +83,7 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
             <div className="space-y-3">
               <label className="text-sm font-semibold text-gray-700 flex items-center space-x-2">
                 <Sparkles className="w-4 h-4 text-emerald-600" />
-                <span>Species</span>
+                <span>Türler</span>
               </label>
               <Select value={filters.species} onValueChange={(value) => handleFilterChange('species', value)}>
                 <SelectTrigger className="border-2 border-green-200/50 focus:border-green-400 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300">
@@ -101,13 +101,13 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
 
             {/* Sub-species Filter */}
             <div className="space-y-3">
-              <label className="text-sm font-semibold text-gray-700">Sub-species / Morph</label>
+              <label className="text-sm font-semibold text-gray-700">Morph</label>
               <Select value={filters.subSpecies} onValueChange={(value) => handleFilterChange('subSpecies', value)}>
                 <SelectTrigger className="border-2 border-green-200/50 focus:border-green-400 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300">
                   <SelectValue placeholder="All sub-species" />
                 </SelectTrigger>
                 <SelectContent className="rounded-xl border-0 shadow-xl">
-                  <SelectItem value="All">All</SelectItem>
+                  <SelectItem value="All">Hepsi</SelectItem>
                   <SelectItem value="Ball Python">Ball Python</SelectItem>
                   <SelectItem value="Corn Snake">Corn Snake</SelectItem>
                   <SelectItem value="Crested Gecko">Crested Gecko</SelectItem>
@@ -121,33 +121,33 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
             {/* Enhanced Price Range */}
             <div className="space-y-4">
               <label className="text-sm font-semibold text-gray-700">
-                Price Range
+                Fiyat Aralığı
               </label>
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-4 border border-green-100">
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-lg font-bold text-green-700">${filters.priceRange[0]}</span>
+                  <span className="text-lg font-bold text-green-700">₺{filters.priceRange[0]}</span>
                   <span className="text-sm text-gray-500">to</span>
-                  <span className="text-lg font-bold text-green-700">${filters.priceRange[1]}</span>
+                  <span className="text-lg font-bold text-green-700">₺{filters.priceRange[1]}</span>
                 </div>
                 <Slider
                   value={filters.priceRange}
                   onValueChange={handlePriceChange}
-                  max={1000}
+                  max={10000}
                   min={0}
                   step={50}
                   className="w-full"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-2">
-                  <span>$0</span>
-                  <span>$500</span>
-                  <span>$1000+</span>
+                  <span>0₺</span>
+                  <span>5000₺</span>
+                  <span>10000+₺</span>
                 </div>
               </div>
             </div>
 
             {/* Gender Filter */}
             <div className="space-y-3">
-              <label className="text-sm font-semibold text-gray-700">Gender</label>
+              <label className="text-sm font-semibold text-gray-700">Cinsiyet</label>
               <Select value={filters.gender} onValueChange={(value) => handleFilterChange('gender', value)}>
                 <SelectTrigger className="border-2 border-green-200/50 focus:border-green-400 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300">
                   <SelectValue placeholder="All genders" />
@@ -164,7 +164,7 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
 
             {/* Age Range Filter */}
             <div className="space-y-3">
-              <label className="text-sm font-semibold text-gray-700">Age Range</label>
+              <label className="text-sm font-semibold text-gray-700">Yaş Aralığı</label>
               <Select value={filters.age} onValueChange={(value) => handleFilterChange('age', value)}>
                 <SelectTrigger className="border-2 border-green-200/50 focus:border-green-400 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300">
                   <SelectValue placeholder="All ages" />
@@ -189,7 +189,7 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
                   className="data-[state=checked]:bg-emerald-600 data-[state=checked]:border-emerald-600 rounded-lg"
                 />
                 <label htmlFor="inStock" className="text-sm font-semibold text-gray-700 cursor-pointer flex items-center space-x-2">
-                  <span>Only show available pets</span>
+                  <span>Sadece Aktif İlanları Göster</span>
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 </label>
               </div>
@@ -201,22 +201,22 @@ const FilterPanel = ({ filters, onFiltersChange, onApplyFilters, onClearFilters 
                 onClick={onApplyFilters}
                 className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-2xl py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                Apply Filters
+                Filtreleri Uygula
               </Button>
               <Button
                 onClick={onClearFilters}
                 variant="outline"
                 className="flex-1 border-2 border-amber-300 text-amber-700 hover:bg-amber-50 rounded-2xl py-3 font-semibold transition-all duration-300"
               >
-                Clear All
+                Hepsini Temizle
               </Button>
             </div>
 
             {/* Quick Filter Tags */}
             <div className="space-y-3">
-              <label className="text-sm font-semibold text-gray-700">Quick Filters</label>
+              <label className="text-sm font-semibold text-gray-700">Hızlı Filtreler</label>
               <div className="flex flex-wrap gap-2">
-                {['Under $200', 'Beginner Friendly', 'Breeding Pair', 'Recently Posted'].map((tag) => (
+                {['2000₺ Altı', 'Beginner Friendly', 'Breeding Pair', 'Recently Posted'].map((tag) => (
                   <Badge
                     key={tag}
                     variant="outline"

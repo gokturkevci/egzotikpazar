@@ -84,23 +84,23 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Marketplace in Türkiye
+                "Türkiye'nin ilk ve tek
                 <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                  Join the First Exotic Pet
+                Egzotik pazaryerine katılın"
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Connect with verified breeders and passionate sellers. Find healthy, well-cared-for reptiles, amphibians, and exotic pets with complete care documentation.
+                Onaylı üreticiler ve tutkulu satıcılarla bağlantı kurun. Sağlıklı ve özenle bakılmış sürüngenler, amfibiler ve egzotik hayvanları keşfedin.
               </p>
 
-              {/* Exclusive Launch Promotion */}
+              {/* Açılışa Özel Fırsat */}
               <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-8 mb-12 max-w-4xl mx-auto animate-pulse">
                 <div className="flex items-center justify-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full flex items-center justify-center animate-bounce">
                     <Sparkles className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-orange-200 font-semibold text-xl">Exclusive Launch Promotion</span>
+                  <span className="text-orange-200 font-semibold text-xl">Açılışa Özel Fırsat</span>
                 </div>
                 <p className="text-3xl md:text-4xl font-bold text-center text-white leading-tight mb-2">
                   %50 Komisyon indirimi + Özel 'Öncü Satıcı' Rozetine Sahip Olun
@@ -161,7 +161,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-gray-800">
-                    Showing {filteredListings.length} of {listings.length} results
+                    {listings.length} Sonuçtan {filteredListings.length} tanesi gösteriliyor
                   </h2>
                   <p className="text-sm text-gray-600">
                     Find your perfect exotic companion
@@ -172,13 +172,12 @@ const Home = () => {
               {/* Sorting Options */}
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <span className="text-sm font-medium text-gray-700">Sort by:</span>
+                  <span className="text-sm font-medium text-gray-700">Sırala:</span>
                   <select className="bg-white border border-green-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                    <option value="newest">Newest First</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="name">Name A-Z</option>
-                    <option value="species">Species</option>
+                    <option value="newest">En Yeni Önce</option>
+                    <option value="price-low">Fiyat: Düşükten Yükseğe</option>
+                    <option value="price-high">Fiyat: Yüksekten Düşüğe</option>
+                    <option value="name">Harf A-Z</option>
                   </select>
                 </div>
                 
@@ -198,7 +197,7 @@ const Home = () => {
                 
                 <div className="hidden sm:flex items-center space-x-2 text-sm text-gray-500">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>Live listings</span>
+                  <span>Aktif İlanlar</span>
                 </div>
               </div>
             </div>

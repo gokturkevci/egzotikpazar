@@ -74,7 +74,7 @@ const Messages = () => {
                 <div className="flex items-center justify-between">
                   <CardTitle className="flex items-center space-x-2">
                     <MessageSquare className="w-5 h-5 text-green-600" />
-                    <span>Messages</span>
+                    <span>Mesajlar</span>
                   </CardTitle>
                   {selectedConversation && (
                     <Button

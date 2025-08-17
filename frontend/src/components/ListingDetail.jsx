@@ -29,9 +29,9 @@ const ListingDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Listing not found</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">İlan Bulunamadı</h2>
           <Button onClick={() => navigate('/')} className="bg-green-600 hover:bg-green-700">
-            Back to Home
+            Ana Sayfaya Dön
           </Button>
         </div>
       </div>
@@ -70,7 +70,7 @@ const ListingDetail = () => {
           className="mb-6 hover:bg-green-50"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Listings
+          İlanlara Dön
         </Button>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -166,19 +166,19 @@ const ListingDetail = () => {
               {/* Quick Details Grid */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="flex items-center space-x-2">
-                  <span className="font-medium text-gray-700">Gender:</span>
+                  <span className="font-medium text-gray-700">Cinsiyet:</span>
                   <span className="text-gray-600">{listing.gender}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <span className="font-medium text-gray-700">Age:</span>
+                  <span className="font-medium text-gray-700">Yaş:</span>
                   <span className="text-gray-600">{listing.age}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <span className="font-medium text-gray-700">Quantity:</span>
+                  <span className="font-medium text-gray-700">Adet:</span>
                   <span className="text-gray-600">{listing.quantity}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <span className="font-medium text-gray-700">Status:</span>
+                  <span className="font-medium text-gray-700">İlan Durumu:</span>
                   <Badge variant={listing.inStock ? "default" : "secondary"}>
                     {listing.inStock ? "In Stock" : "Out of Stock"}
                   </Badge>
@@ -202,7 +202,7 @@ const ListingDetail = () => {
                     className="flex-1 border-green-300 text-green-600 hover:bg-green-50"
                   >
                     <MessageSquare className="w-4 h-4 mr-2" />
-                    Message Seller
+                    Satıcıya Mesaj Gönder
                   </Button>
                 </div>
               </div>
@@ -213,7 +213,7 @@ const ListingDetail = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Shield className="w-5 h-5 text-green-600" />
-                  <span>Seller Information</span>
+                  <span>Satıcı Bilgileri</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -237,7 +237,7 @@ const ListingDetail = () => {
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-3 h-3 text-yellow-500" />
-                        <span>4.8 (127 reviews)</span>
+                        <span>4.8 (127 görüntülenme)</span>
                       </div>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ const ListingDetail = () => {
         <div className="mt-12">
           <Tabs defaultValue="description" className="w-full">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="description">Description</TabsTrigger>
+              <TabsTrigger value="description">Açıklama</TabsTrigger>
               <TabsTrigger value="care">Care Information</TabsTrigger>
               <TabsTrigger value="reviews">Reviews</TabsTrigger>
             </TabsList>
@@ -275,7 +275,7 @@ const ListingDetail = () => {
                   </p>
                   <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-800">Details</h4>
+                      <h4 className="font-semibold text-gray-800">Detaylar</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
                           <span className="text-gray-600">Species:</span>
@@ -292,26 +292,26 @@ const ListingDetail = () => {
                           </div>
                         )}
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Gender:</span>
+                          <span className="text-gray-600">Cinsiyet:</span>
                           <span className="font-medium">{listing.gender}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Age:</span>
+                          <span className="text-gray-600">Yaş:</span>
                           <span className="font-medium">{listing.age}</span>
                         </div>
                       </div>
                     </div>
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-800">Availability</h4>
+                      <h4 className="font-semibold text-gray-800">Uygunluk</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Stock:</span>
+                          <span className="text-gray-600">Stok:</span>
                           <Badge variant={listing.inStock ? "default" : "secondary"}>
                             {listing.inStock ? "Available" : "Out of Stock"}
                           </Badge>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Quantity:</span>
+                          <span className="text-gray-600">Adet:</span>
                           <span className="font-medium">{listing.quantity}</span>
                         </div>
                         <div className="flex justify-between">

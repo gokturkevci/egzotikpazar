@@ -15,7 +15,7 @@ const CartAnimation = () => {
           <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
             <Check className="w-4 h-4 text-white" />
           </div>
-          <span className="font-semibold text-green-700">Added to Cart!</span>
+          <span className="font-semibold text-green-700">Sepete Eklendi!</span>
         </div>
 
         {/* Product Info */}
@@ -40,11 +40,11 @@ const CartAnimation = () => {
           <div className="flex items-center space-x-2">
             <ShoppingCart className="w-4 h-4 text-green-600" />
             <span className="text-sm text-green-700">
-              {getTotalItems()} {getTotalItems() === 1 ? 'item' : 'items'} in cart
+              {getTotalItems()} {getTotalItems() === 1 ? 'ürün' : 'ürün'} sepette
             </span>
           </div>
           <button className="text-xs font-medium text-green-600 hover:text-green-700 underline">
-            View Cart
+            Sepeti Görüntüle
           </button>
         </div>
       </div>

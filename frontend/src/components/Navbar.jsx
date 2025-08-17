@@ -116,7 +116,7 @@ const Navbar = () => {
                   />
                   <div className="text-left">
                     <div className="font-semibold text-gray-800 text-sm">{currentUser.name}</div>
-                    <div className="text-xs text-gray-500">Verified Seller</div>
+                    <div className="text-xs text-gray-500">Doğrulanmış Satıcı</div>
                   </div>
                 </Button>
 

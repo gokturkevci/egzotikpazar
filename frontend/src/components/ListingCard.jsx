@@ -126,7 +126,7 @@ const ListingCard = ({ listing }) => {
             </div>
             <div className="flex items-center space-x-0.5 text-green-600 hover:text-green-700 transition-colors cursor-pointer">
               <MapPin className="w-2.5 h-2.5" />
-              <span className="font-medium">Seller</span>
+              <span className="font-medium">Satıcı</span>
             </div>
           </div>
         </div>

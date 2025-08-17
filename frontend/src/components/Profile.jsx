@@ -42,26 +42,26 @@ const Profile = () => {
                   </div>
                   <div className="flex items-center space-x-1">
                     <Package className="w-4 h-4" />
-                    <span>{userListings.length} Active Listings</span>
+                    <span>{userListings.length} Aktif İlanlar</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <ShoppingBag className="w-4 h-4" />
-                    <span>{purchasedItems.length} Purchases</span>
+                    <span>{purchasedItems.length} Satın Aldıklarım</span>
                   </div>
                 </div>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                  <Badge className="bg-green-100 text-green-700">Verified Seller</Badge>
-                  <Badge className="bg-blue-100 text-blue-700">4.8★ Rating</Badge>
+                  <Badge className="bg-green-100 text-green-700">Onaylı Satıcı</Badge>
+                  <Badge className="bg-blue-100 text-blue-700">4.8★ Değerlendirme</Badge>
                 </div>
               </div>
               <div className="flex space-x-3">
                 <Button className="bg-green-600 hover:bg-green-700">
                   <Plus className="w-4 h-4 mr-2" />
-                  Add Listing
+                  İlan Ekle
                 </Button>
                 <Button variant="outline" className="border-green-300 text-green-600">
                   <Settings className="w-4 h-4 mr-2" />
-                  Settings
+                  Ayarlar
                 </Button>
               </div>
             </div>
@@ -71,19 +71,19 @@ const Profile = () => {
         {/* Profile Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-5 mb-8">
-            <TabsTrigger value="active-listings">Active Listings</TabsTrigger>
-            <TabsTrigger value="sold-items">Sold Items</TabsTrigger>
-            <TabsTrigger value="purchased-items">Purchased Items</TabsTrigger>
-            <TabsTrigger value="messages">Messages</TabsTrigger>
-            <TabsTrigger value="settings">Settings</TabsTrigger>
+            <TabsTrigger value="active-listings">Aktif İlanlar</TabsTrigger>
+            <TabsTrigger value="sold-items">Satışlarım</TabsTrigger>
+            <TabsTrigger value="purchased-items">Satın Aldıklarım</TabsTrigger>
+            <TabsTrigger value="messages">Mesajlar</TabsTrigger>
+            <TabsTrigger value="settings">Ayarlar</TabsTrigger>
           </TabsList>
 
           <TabsContent value="active-listings" className="space-y-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-gray-800">Active Listings</h2>
+              <h2 className="text-2xl font-bold text-gray-800">Aktif İlanlar</h2>
               <Button className="bg-green-600 hover:bg-green-700">
                 <Plus className="w-4 h-4 mr-2" />
-                Add New Listing
+                Yeni İlan Ekle
               </Button>
             </div>
             
@@ -97,11 +97,11 @@ const Profile = () => {
               <Card>
                 <CardContent className="text-center py-12">
                   <Package className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-600 mb-2">No active listings</h3>
-                  <p className="text-gray-500 mb-6">Start selling by creating your first listing</p>
+                  <h3 className="text-xl font-semibold text-gray-600 mb-2">Aktif İlanın Yok</h3>
+                  <p className="text-gray-500 mb-6">İlk ilanını oluştur, satışa başla!</p>
                   <Button className="bg-green-600 hover:bg-green-700">
                     <Plus className="w-4 h-4 mr-2" />
-                    Create First Listing
+                    İlk İlanını Oluştur
                   </Button>
                 </CardContent>
               </Card>
@@ -109,7 +109,7 @@ const Profile = () => {
           </TabsContent>
 
           <TabsContent value="sold-items" className="space-y-6">
-            <h2 className="text-2xl font-bold text-gray-800">Sold Items</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Satılan Ürünler</h2>
             {soldItems.length > 0 ? (
               <div className="space-y-4">
                 {soldItems.map((item) => (
@@ -196,28 +196,28 @@ const Profile = () => {
           </TabsContent>
 
           <TabsContent value="settings" className="space-y-6">
-            <h2 className="text-2xl font-bold text-gray-800">Account Settings</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Hesap Ayarları</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Change Password</CardTitle>
-                  <CardDescription>Update your account password</CardDescription>
+                  <CardTitle>Şifreni Değiştir</CardTitle>
+                  <CardDescription>Hesap Şif</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Button variant="outline" className="w-full border-green-300 text-green-600">
-                    Change Password
+                    Şifreni Değiştir
                   </Button>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Notification Settings</CardTitle>
+                  <CardTitle>Bildirim</CardTitle>
                   <CardDescription>Manage your email and SMS preferences</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Button variant="outline" className="w-full border-green-300 text-green-600">
-                    Manage Notifications
+                    Bildirimleri Yönet
                   </Button>
                 </CardContent>
               </Card>
