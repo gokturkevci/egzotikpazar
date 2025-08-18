@@ -170,14 +170,14 @@ const Home = () => {
             </div>
             
             <div className="relative z-10">
-            {/* Sorting Options Header */}
-            <div className="flex items-center justify-between mb-8 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-green-100">
+            {/* Enhanced Sorting Options Header */}
+            <div className="flex items-center justify-between mb-8 bg-gradient-to-r from-white/80 via-blue-50/50 to-indigo-50/50 backdrop-blur-md rounded-3xl p-6 shadow-lg border-2 border-white/60">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-                  <Search className="w-5 h-5 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
+                  <Search className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-800">
+                  <h2 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent">
                     {listings.length} Sonuçtan {filteredListings.length} tanesi gösteriliyor
                   </h2>
                 </div>
