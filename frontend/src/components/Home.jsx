@@ -146,15 +146,17 @@ const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Enhanced Filter Panel with Distinct Background */}
+          {/* Enhanced Filter Panel with Distinctive Background */}
           <div className="lg:w-80 animate-slide-in-left">
-            <div className="sticky top-8 bg-gradient-to-br from-indigo-100 via-purple-50 to-blue-100 rounded-2xl shadow-lg border border-indigo-200/50 backdrop-blur-sm">
-              <FilterPanel
-                filters={filters}
-                onFiltersChange={handleFiltersChange}
-                onApplyFilters={applyFilters}
-                onClearFilters={clearFilters}
-              />
+            <div className="sticky top-8 bg-gradient-to-br from-indigo-200 via-purple-100 to-pink-100 rounded-3xl shadow-2xl border-2 border-white/50 backdrop-blur-lg p-1">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-inner">
+                <FilterPanel
+                  filters={filters}
+                  onFiltersChange={handleFiltersChange}
+                  onApplyFilters={applyFilters}
+                  onClearFilters={clearFilters}
+                />
+              </div>
             </div>
           </div>
 
