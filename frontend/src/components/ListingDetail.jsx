@@ -235,6 +235,18 @@ const ListingDetail = () => {
                     <ShoppingCart className="w-4 h-4 mr-2" />
                     {listing.inStock ? "Add to Cart" : "Out of Stock"}
                   </Button>
+                  
+                  {listing.inStock && (
+                    <Button
+                      onClick={handleMakeOffer}
+                      variant="outline"
+                      className="flex-1 border-blue-300 text-blue-600 hover:bg-blue-50 font-semibold"
+                    >
+                      <span className="mr-2">💰</span>
+                      Teklif Ver
+                    </Button>
+                  )}
+                  
                   <Button
                     onClick={handleContact}
                     variant="outline"
