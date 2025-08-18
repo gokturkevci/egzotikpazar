@@ -160,8 +160,16 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Enhanced Main Content with Distinct Background */}
-          <div className="lg:flex-1 animate-fade-in-up bg-gradient-to-br from-white via-gray-50/80 to-blue-50/40 rounded-2xl shadow-lg border border-gray-200/50 backdrop-blur-sm p-6">
+          {/* Enhanced Main Content with Prominent Background */}
+          <div className="lg:flex-1 animate-fade-in-up bg-gradient-to-br from-white via-slate-50 to-blue-50/60 rounded-3xl shadow-2xl border-2 border-white/50 backdrop-blur-lg p-8 relative overflow-hidden">
+            
+            {/* Content Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full filter blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-green-400 to-blue-400 rounded-full filter blur-3xl"></div>
+            </div>
+            
+            <div className="relative z-10">
             {/* Sorting Options Header */}
             <div className="flex items-center justify-between mb-8 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-green-100">
               <div className="flex items-center space-x-3">
