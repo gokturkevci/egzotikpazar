@@ -259,6 +259,7 @@ const Home = () => {
                 </Button>
               </div>
             )}
+            </div>
           </div>
         </div>
         </div>
