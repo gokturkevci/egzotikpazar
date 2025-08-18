@@ -462,6 +462,97 @@ const ListingDetail = () => {
             </TabsContent>
           </Tabs>
         </div>
+        
+        {/* Make Offer Modal */}
+        {showOfferModal && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-gray-800">Teklif Ver</h3>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setShowOfferModal(false)}
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    ✕
+                  </Button>
+                </div>
+                
+                <div className="mb-6">
+                  <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl">
+                    <img
+                      src={listing.images[0]}
+                      alt={listing.title}
+                      className="w-16 h-16 rounded-lg object-cover"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-gray-800 line-clamp-1">{listing.title}</h4>
+                      <p className="text-green-600 font-bold text-lg">${listing.price.toLocaleString()}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <form onSubmit={handleSubmitOffer} className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Teklif Fiyatı (Liste fiyatından düşük olmalı)
+                    </label>
+                    <div className="relative">
+                      <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+                      <input
+                        type="number"
+                        value={offerAmount}
+                        onChange={(e) => setOfferAmount(e.target.value)}
+                        placeholder="0.00"
+                        min="1"
+                        max={listing.price - 1}
+                        step="0.01"
+                        required
+                        className="w-full pl-8 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors"
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Maksimum: ${(listing.price - 1).toLocaleString()}
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Mesaj (İsteğe bağlı)
+                    </label>
+                    <textarea
+                      value={offerMessage}
+                      onChange={(e) => setOfferMessage(e.target.value)}
+                      placeholder="Teklifinizle ilgili ek bilgi..."
+                      rows="3"
+                      className="w-full p-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors resize-none"
+                    />
+                  </div>
+                  
+                  <div className="flex space-x-3 pt-4">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => setShowOfferModal(false)}
+                      className="flex-1"
+                    >
+                      İptal
+                    </Button>
+                    <Button
+                      type="submit"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                    >
+                      <span className="mr-2">💰</span>
+                      Teklif Gönder
+                    </Button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
