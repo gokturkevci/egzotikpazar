@@ -49,7 +49,40 @@ const ListingDetail = () => {
     // Mock cart functionality
   };
 
-  const handleSendMessage = () => {
+  const handleMakeOffer = () => {
+    setShowOfferModal(true);
+  };
+
+  const handleSubmitOffer = (e) => {
+    e.preventDefault();
+    const offer = parseFloat(offerAmount);
+    
+    if (!offer || offer >= listing.price) {
+      alert('Teklif fiyatı, liste fiyatından düşük olmalıdır!');
+      return;
+    }
+    
+    if (offer <= 0) {
+      alert('Lütfen geçerli bir fiyat girin!');
+      return;
+    }
+    
+    console.log('Offer submitted:', {
+      listingId: listing.id,
+      offerAmount: offer,
+      message: offerMessage,
+      buyerId: 'current-user-id' // In real app, get from auth
+    });
+    
+    // Reset form and close modal
+    setOfferAmount('');
+    setOfferMessage('');
+    setShowOfferModal(false);
+    
+    alert('Teklifiniz başarıyla gönderildi!');
+  };
+
+  const handleContact = () => {
     console.log('Opening message composer for seller:', seller.name);
     navigate('/messages');
   };
