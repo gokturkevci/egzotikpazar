@@ -236,7 +236,7 @@ const ListingDetail = () => {
                     {listing.inStock ? "Add to Cart" : "Out of Stock"}
                   </Button>
                   <Button
-                    onClick={handleSendMessage}
+                    onClick={handleContact}
                     variant="outline"
                     className="flex-1 border-green-300 text-green-600 hover:bg-green-50"
                   >
