@@ -66,7 +66,7 @@ const Cart = () => {
           <Card className="text-center py-16">
             <CardContent>
               <ShoppingCart className="w-24 h-24 text-gray-400 mx-auto mb-6" />
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Your cart is empty</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Sepetiniz Boş</h2>
               <p className="text-gray-600 mb-8">Discover amazing exotic pets to add to your collection</p>
               <Button 
                 onClick={() => navigate('/')}

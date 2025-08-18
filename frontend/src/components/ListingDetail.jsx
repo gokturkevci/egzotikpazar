@@ -248,7 +248,7 @@ const ListingDetail = () => {
                   onClick={() => navigate(`/seller/${seller.id}`)}
                 >
                   <MapPin className="w-4 h-4 mr-2" />
-                  View Seller Profile
+                  Satıcının Profilini Görüntüle
                 </Button>
               </CardContent>
             </Card>

@@ -26,7 +26,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">EP</span>
               </div>
-              <span className="text-xl font-bold">ExoticPets</span>
+              <span className="text-xl font-bold">EgzotikPazar</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               The most trusted marketplace for exotic pets and reptiles. 
@@ -106,8 +106,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="pt-4 text-sm text-gray-300">
-              <p>📧 support@exoticpets.com</p>
-              <p>📞 +1 (555) 123-PETS</p>
+              <p>📧 egzotikpazarco@gmail.com</p>
+              <p>📞 +90 (551) 842 18 95</p>
+              <p>📞 +90 (551) 842 10 99</p>
             </div>
           </div>
         </div>

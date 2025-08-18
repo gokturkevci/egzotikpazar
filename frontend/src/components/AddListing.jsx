@@ -117,7 +117,7 @@ const AddListing = () => {
             className="hover:bg-green-50"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Profile
+            Profile Geri Dön
           </Button>
           <h1 className="text-3xl font-bold text-gray-800">Create New Listing</h1>
         </div>

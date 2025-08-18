@@ -138,11 +138,11 @@ const Navbar = () => {
                     
                     <div className="py-2">
                       {[
-                        { name: 'Profile', path: '/profile', icon: User },
-                        { name: 'Settings', path: '/settings', icon: Settings },
-                        { name: 'Messages', path: '/messages', icon: MessageSquare },
-                        { name: 'Cart', path: '/cart', icon: ShoppingCart },
-                        { name: 'Add Listing', path: '/add-listing', icon: Plus }
+                        { name: 'Profil', path: '/profile', icon: User },
+                        { name: 'Ayarlar', path: '/settings', icon: Settings },
+                        { name: 'Mesajlar', path: '/messages', icon: MessageSquare },
+                        { name: 'Sepet', path: '/cart', icon: ShoppingCart },
+                        { name: 'İlan Oluştur', path: '/add-listing', icon: Plus }
                       ].map((item) => (
                         <Link
                           key={item.name}
@@ -249,11 +249,11 @@ const Navbar = () => {
               ) : (
                 <div className="flex flex-col space-y-2 pt-4 border-t border-green-100">
                   {[
-                    { name: 'Profile', path: '/profile', icon: User },
-                    { name: 'Settings', path: '/settings', icon: Settings },
-                    { name: 'Messages', path: '/messages', icon: MessageSquare },
-                    { name: 'Cart', path: '/cart', icon: ShoppingCart },
-                    { name: 'Add Listing', path: '/add-listing', icon: Plus }
+                    { name: 'Profil', path: '/profile', icon: User },
+                    { name: 'Ayarlar', path: '/settings', icon: Settings },
+                    { name: 'Mesajlar', path: '/messages', icon: MessageSquare },
+                    { name: 'Sepet', path: '/cart', icon: ShoppingCart },
+                    { name: 'İlan Oluştur', path: '/add-listing', icon: Plus }
                   ].map((item) => (
                     <Link
                       key={item.name}
