@@ -139,9 +139,9 @@ const Home = () => {
       <div className="bg-gradient-to-br from-white/70 via-blue-50/30 to-slate-50/40 backdrop-blur-sm py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Filter Panel - Left Sidebar */}
+          {/* Enhanced Filter Panel with Distinct Background */}
           <div className="lg:w-80 animate-slide-in-left">
-            <div className="sticky top-8">
+            <div className="sticky top-8 bg-gradient-to-br from-indigo-100 via-purple-50 to-blue-100 rounded-2xl shadow-lg border border-indigo-200/50 backdrop-blur-sm">
               <FilterPanel
                 filters={filters}
                 onFiltersChange={handleFiltersChange}
@@ -151,8 +151,8 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Listings Grid */}
-          <div className="lg:flex-1 animate-fade-in-up">
+          {/* Enhanced Main Content with Distinct Background */}
+          <div className="lg:flex-1 animate-fade-in-up bg-gradient-to-br from-white via-gray-50/80 to-blue-50/40 rounded-2xl shadow-lg border border-gray-200/50 backdrop-blur-sm p-6">
             {/* Sorting Options Header */}
             <div className="flex items-center justify-between mb-8 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-green-100">
               <div className="flex items-center space-x-3">
