@@ -13,6 +13,9 @@ const ListingDetail = () => {
   const [listing, setListing] = useState(null);
   const [seller, setSeller] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showOfferModal, setShowOfferModal] = useState(false);
+  const [offerAmount, setOfferAmount] = useState('');
+  const [offerMessage, setOfferMessage] = useState('');
 
   useEffect(() => {
     // Scroll to top when component mounts
