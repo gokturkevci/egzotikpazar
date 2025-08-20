@@ -85,7 +85,7 @@ const Contact = () => {
               İletişime Geçin
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Türkiye'nin ilk egzotik hayvan pazaryeri hakkında sorularınız mı var? 
+              Türkiye'nin ilk dijital egzotik hayvan pazaryeri hakkında sorularınız mı var? 
               Size yardımcı olmaktan mutluluk duyarız!
             </p>
           </div>
