@@ -22,7 +22,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Ana Sayfa', path: '/' },
     { name: 'Blog', path: '/blog' },
-    { name: 'İletişim', path: '/iletisim' }
+    { name: 'İletişim', path: '/contact' }
   ];
 
   return (
