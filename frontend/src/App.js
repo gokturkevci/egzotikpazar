@@ -29,13 +29,13 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/listing/:id" element={<ListingDetail />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/register" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/add-listing" element={<AddListing />} />
               <Route path="/listings" element={<Home />} />
-              <Route path="/blog" element={<div className="p-8 text-center">Blog coming soon!</div>} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/sellers" element={<div className="p-8 text-center">Sellers page coming soon!</div>} />
