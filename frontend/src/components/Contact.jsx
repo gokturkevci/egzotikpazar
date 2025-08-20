@@ -33,16 +33,10 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: MapPin,
-      title: 'Adres',
-      details: 'Beşiktaş, İstanbul, Türkiye\nKartal Mahallesi, Örnek Sokak No: 123',
+      icon: Globe,
+      title: 'Dijital Platform',
+      details: '7/24 Online Hizmet\nTürkiye Geneli Dijital Pazaryeri',
       color: 'text-blue-600'
-    },
-    {
-      icon: Phone,
-      title: 'Telefon',
-      details: '+90 212 555 0123\n+90 532 555 0123',
-      color: 'text-green-600'
     },
     {
       icon: Mail,
@@ -51,9 +45,15 @@ const Contact = () => {
       color: 'text-purple-600'
     },
     {
+      icon: MessageCircle,
+      title: 'WhatsApp',
+      details: '+90 532 555 0123\nAnlık Destek',
+      color: 'text-green-600'
+    },
+    {
       icon: Clock,
-      title: 'Çalışma Saatleri',
-      details: 'Pazartesi - Cuma: 09:00 - 18:00\nCumartesi: 10:00 - 16:00\nPazar: Kapalı',
+      title: 'Destek Saatleri',
+      details: 'Pazartesi - Cuma: 09:00 - 18:00\nCumartesi: 10:00 - 16:00\nPazar: E-posta Desteği',
       color: 'text-orange-600'
     }
   ];
