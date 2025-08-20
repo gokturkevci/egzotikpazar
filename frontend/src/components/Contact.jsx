@@ -296,29 +296,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map Section */}
-          <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-            <Card className="bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/40 backdrop-blur-md shadow-2xl border-2 border-white/60 rounded-3xl overflow-hidden">
-              <CardHeader className="bg-gradient-to-r from-blue-600/10 to-indigo-600/10 border-b border-white/20">
-                <CardTitle className="text-2xl font-bold text-gray-800 text-center">
-                  Konumumuz
-                </CardTitle>
-                <CardDescription className="text-gray-600 text-center">
-                  İstanbul merkezindeki ofisimizi ziyaret edebilirsiniz
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-blue-100 flex items-center justify-center">
-                  <div className="text-gray-600 text-center">
-                    <MapPin className="w-16 h-16 mx-auto mb-4 text-blue-600" />
-                    <p className="text-lg font-semibold">Harita Entegrasyonu</p>
-                    <p className="text-sm">Google Maps veya başka bir harita servis entegrasyonu</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
           {/* FAQ Section */}
           <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
             <Card className="bg-gradient-to-br from-white via-orange-50/30 to-red-50/40 backdrop-blur-md shadow-2xl border-2 border-white/60 rounded-3xl overflow-hidden">
