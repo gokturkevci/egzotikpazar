@@ -308,19 +308,27 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-2">Nasıl satıcı olabilirim?</h4>
-                    <p className="text-gray-600 text-sm">Kayıt olduktan sonra profil ayarlarınızdan satıcı başvurusu yapabilirsiniz.</p>
+                    <p className="text-gray-600 text-sm">Online kayıt olduktan sonra profil ayarlarınızdan dijital satıcı başvurusu yapabilirsiniz.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Ödeme güvenli mi?</h4>
-                    <p className="text-gray-600 text-sm">Tüm ödemeler SSL sertifikası ile korumalı sistemimiz üzerinden yapılmaktadır.</p>
+                    <h4 className="font-semibold text-gray-800 mb-2">Online ödeme güvenli mi?</h4>
+                    <p className="text-gray-600 text-sm">Tüm ödemeler SSL sertifikası ile korumalı dijital platformumuz üzerinden güvenle yapılmaktadır.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Kargo nasıl yapılıyor?</h4>
-                    <p className="text-gray-600 text-sm">Özel hayvan kargo firmaları ile güvenli ve hızlı teslimat sağlıyoruz.</p>
+                    <h4 className="font-semibold text-gray-800 mb-2">Türkiye geneli teslimat var mı?</h4>
+                    <p className="text-gray-600 text-sm">Evet, dijital platformumuz sayesinde Türkiye'nin her yerine özel hayvan kargo firmaları ile güvenli teslimat sağlıyoruz.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Müşteri desteği saatleri?</h4>
-                    <p className="text-gray-600 text-sm">Hafta içi 09:00-18:00, Cumartesi 10:00-16:00 saatleri arasında hizmet veriyoruz.</p>
+                    <h4 className="font-semibold text-gray-800 mb-2">Online destek nasıl alırım?</h4>
+                    <p className="text-gray-600 text-sm">WhatsApp, e-posta veya platformumuzdaki canlı destek ile 7/24 yardım alabilirsiniz.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">Dijital satış süreci nasıl işler?</h4>
+                    <p className="text-gray-600 text-sm">Tamamen online platformumuzda kayıt, ilan oluşturma ve satış süreçlerini kolayca yönetebilirsiniz.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">WhatsApp desteği hangi saatlerde?</h4>
+                    <p className="text-gray-600 text-sm">Pazartesi-Cumartesi 09:00-18:00, Pazar günleri WhatsApp ile sınırlı destek mevcuttur.</p>
                   </div>
                 </div>
               </CardContent>
