@@ -227,13 +227,44 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    Türkiye'nin ilk ve en güvenilir egzotik hayvan pazaryeri olarak, 
-                    sağlıklı ve kaliteli egzotik hayvanları pet severlere ulaştırmak için buradayız.
+                    Türkiye'nin ilk ve en güvenilir dijital egzotik hayvan pazaryeri olarak, 
+                    sağlıklı ve kaliteli egzotik hayvanları pet severlere online ortamda ulaştırmak için buradayız.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    Deneyimli ekibimiz ve titizlikle seçilmiş satıcı ağımızla, 
-                    hem alıcılara hem de satıcılara en iyi hizmeti sunmaya devam ediyoruz.
+                    Tamamen dijital platformumuz sayesinde Türkiye'nin her yerinden güvenli alışveriş yapabilir, 
+                    deneyimli ekibimizden 7/24 destek alabilirsiniz.
                   </p>
+                </CardContent>
+              </Card>
+
+              {/* WhatsApp Quick Contact */}
+              <Card className="bg-gradient-to-br from-white via-green-50/30 to-emerald-50/40 backdrop-blur-md shadow-2xl border-2 border-white/60 rounded-3xl overflow-hidden">
+                <CardHeader className="bg-gradient-to-r from-green-600/10 to-emerald-600/10 border-b border-white/20">
+                  <CardTitle className="text-2xl font-bold text-gray-800 flex items-center">
+                    <MessageCircle className="w-7 h-7 mr-3 text-green-600" />
+                    Hızlı İletişim
+                  </CardTitle>
+                  <CardDescription className="text-gray-600">
+                    Anlık destek için WhatsApp'tan bize ulaşın
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a
+                      href="https://wa.me/905325550123?text=Merhaba,%20ExoticPets%20hakkında%20bilgi%20almak%20istiyorum."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                    >
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      WhatsApp ile İletişim
+                    </a>
+                    <div className="flex-1 text-center sm:text-left">
+                      <p className="text-gray-700 font-semibold">+90 532 555 0123</p>
+                      <p className="text-gray-600 text-sm">Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                      <p className="text-gray-600 text-sm">Pazar: Sadece WhatsApp</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
