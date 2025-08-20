@@ -44,18 +44,18 @@ const Blog = () => {
     },
     {
       id: 3,
-      title: "Akvaryum Kurulumu: Tropik Balıklar",
-      excerpt: "Tropik balıklar için ideal akvaryum ortamı nasıl hazırlanır? Su sıcaklığı, filtrasyon ve dekorasyon ipuçları.",
-      content: "Tropik balık akvaryumu kurmak...",
-      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c33a?w=600&h=400&fit=crop",
-      category: "Aquatic Animals",
-      author: "Biyolog Fatma Demir",
-      publishDate: "2024-01-10",
-      readTime: "10 min",
-      views: 1450,
-      likes: 102,
+      title: "Hamster ve Gerbil Bakım Rehberi",
+      excerpt: "Küçük kemirgen hayvanların barınma, beslenme ve sağlık ihtiyaçları hakkında detaylı bilgiler.",
+      content: "Küçük kemirgenler...",
+      image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&h=400&fit=crop",
+      category: "Small Mammals",
+      author: "Veteriner Elif Şahin",
+      publishDate: "2024-01-14",
+      readTime: "7 min",
+      views: 892,
+      likes: 73,
       featured: true,
-      tags: ["aquarium", "setup", "tropical-fish"]
+      tags: ["hamster", "gerbil", "small-pets"]
     },
     {
       id: 4,
@@ -119,22 +119,82 @@ const Blog = () => {
     },
     {
       id: 8,
-      title: "Axolotl Bakımı ve Su Kalitesi",
-      excerpt: "Su salamandırı axolotl'ların bakım gereksinimleri, su kalitesi parametreleri ve beslenme düzeni.",
-      content: "Axolotl bakımında dikkat edilmesi gerekenler...",
-      image: "https://images.unsplash.com/photo-1583419124505-51e5976c399c?w=600&h=400&fit=crop",
-      category: "Aquatic Animals",
-      author: "Akvaryum Uzmanı Deniz Bulut",
-      publishDate: "2023-12-28",
-      readTime: "8 min",
-      views: 945,
-      likes: 71,
+      title: "Tavşan Barınağı: İç ve Dış Mekan Seçenekleri",
+      excerpt: "Evcil tavşanlar için ideal barınak tasarımı, güvenlik önlemleri ve konfor sağlayıcı elementler.",
+      content: "Tavşan barınağı tasarımı...",
+      image: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&h=400&fit=crop",
+      category: "Small Mammals",
+      author: "Uzman Canan Öztürk",
+      publishDate: "2023-12-30",
+      readTime: "6 min",
+      views: 654,
+      likes: 47,
       featured: false,
-      tags: ["axolotl", "water-quality", "care"]
+      tags: ["rabbit", "housing", "safety"]
+    },
+    {
+      id: 9,
+      title: "Ferret Sosyalizasyonu ve Oyun Zamanı",
+      excerpt: "Ferretların sosyal ihtiyaçları, oyun aktiviteleri ve diğer hayvanlarla etkileşim rehberi.",
+      content: "Ferret sosyalizasyonu...",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
+      category: "Small Mammals",
+      author: "Dr. Murat Keskin",
+      publishDate: "2023-12-25",
+      readTime: "8 min",
+      views: 789,
+      likes: 62,
+      featured: false,
+      tags: ["ferret", "socialization", "play"]
+    },
+    {
+      id: 10,
+      title: "İguana Beslenme Programı ve Diyet Çeşitliliği",
+      excerpt: "İguanaların yaşam evresine göre beslenme gereksinimleri ve sağlıklı diyet planlaması.",
+      content: "İguana beslenme rehberi...",
+      image: "https://images.unsplash.com/photo-1580315399732-73c4e5b4e0e7?w=600&h=400&fit=crop",
+      category: "Reptiles",
+      author: "Beslenme Uzmanı Deniz Kök",
+      publishDate: "2023-12-22",
+      readTime: "10 min",
+      views: 1032,
+      likes: 85,
+      featured: false,
+      tags: ["iguana", "nutrition", "diet"]
+    },
+    {
+      id: 11,
+      title: "Cockatiel Eğitimi: Temel Komutlar ve İpuçları",
+      excerpt: "Sultan papağanlarını eğitmek için etkili yöntemler, sabır gerektiren teknikler ve ödül sistemi.",
+      content: "Cockatiel eğitim süreci...",
+      image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&h=400&fit=crop",
+      category: "Exotic Birds",
+      author: "Eğitmen Sibel Yurt",
+      publishDate: "2023-12-20",
+      readTime: "9 min",
+      views: 743,
+      likes: 56,
+      featured: false,
+      tags: ["cockatiel", "training", "commands"]
+    },
+    {
+      id: 12,
+      title: "Chinchilla Toz Banyosu ve Bakım Rutini",
+      excerpt: "Chinchillaların günlük bakım ihtiyaçları, toz banyosu önemini ve sağlıklı yaşam koşulları.",
+      content: "Chinchilla bakım rehberi...",
+      image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&h=400&fit=crop",
+      category: "Small Mammals",
+      author: "Uzman Aylin Çelik",
+      publishDate: "2023-12-18",
+      readTime: "7 min",
+      views: 567,
+      likes: 43,
+      featured: false,
+      tags: ["chinchilla", "grooming", "care"]
     }
   ];
 
-  const categories = ['All', 'Geckos', 'Exotic Birds', 'Aquatic Animals', 'Reptiles'];
+  const categories = ['All', 'Geckos', 'Exotic Birds', 'Small Mammals', 'Reptiles'];
 
   // Filter and search logic
   const filteredPosts = useMemo(() => {
