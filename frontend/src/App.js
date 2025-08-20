@@ -13,6 +13,7 @@ import Messages from "./components/Messages";
 import AddListing from "./components/AddListing";
 import Settings from "./components/Settings";
 import Contact from "./components/Contact";
+import Blog from "./components/Blog";
 import CartAnimation from "./components/CartAnimation";
 import { CartProvider } from "./contexts/CartContext";
 import { Toaster } from "./components/ui/toaster";
