@@ -59,11 +59,11 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, name: 'Facebook', url: '#', color: 'hover:text-blue-600' },
-    { icon: Twitter, name: 'Twitter', url: '#', color: 'hover:text-sky-500' },
-    { icon: Instagram, name: 'Instagram', url: '#', color: 'hover:text-pink-600' },
-    { icon: Youtube, name: 'YouTube', url: '#', color: 'hover:text-red-600' },
-    { icon: Linkedin, name: 'LinkedIn', url: '#', color: 'hover:text-blue-700' }
+    { icon: Facebook, name: 'Facebook', url: 'https://facebook.com/exoticpetsturkey', color: 'hover:text-blue-600' },
+    { icon: Twitter, name: 'X (Twitter)', url: 'https://x.com/exoticpetsturkey', color: 'hover:text-gray-800' },
+    { icon: Instagram, name: 'Instagram', url: 'https://instagram.com/exoticpetsturkey', color: 'hover:text-pink-600' },
+    { icon: Youtube, name: 'YouTube', url: 'https://youtube.com/@exoticpetsturkey', color: 'hover:text-red-600' },
+    { icon: Linkedin, name: 'LinkedIn', url: 'https://linkedin.com/company/exoticpetsturkey', color: 'hover:text-blue-700' }
   ];
 
   return (
