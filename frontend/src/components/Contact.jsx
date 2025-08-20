@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare, Facebook, Twitter, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { Globe, Mail, Clock, Send, User, MessageSquare, Facebook, Twitter, Instagram, Youtube, Linkedin, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
